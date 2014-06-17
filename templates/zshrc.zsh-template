@@ -55,9 +55,9 @@ plugins=(
     atom
     battery
     zsh_reload
-    vi-mode
     vagrant
     urltools
+    history
 )
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.3
