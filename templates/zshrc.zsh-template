@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/project/dotzsh
+export ZSH=$HOME/.dotzsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -60,8 +60,8 @@ plugins=(
     history
 )
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.3
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export VIRTUALENVWRAPPER_PYTHON=`which python`
+export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
 
 source $ZSH/oh-my-zsh.sh
 
