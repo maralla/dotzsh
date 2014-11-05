@@ -6,10 +6,6 @@ alias po='popd'
 alias ...='cd ../..'
 alias -- -='cd -'
 
-# Super user
-alias _='sudo'
-alias please='sudo'
-
 #alias g='grep -in'
 
 # Show history
@@ -30,7 +26,14 @@ alias lsa='ls -lah'
 alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
+alias lg="ls | grep"
 alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
 
+alias tmux="tmux -2"
+
+alias cj="cd ~/project"
+alias cw="cd ~/workspace"
+
+alias pg="ps aux | grep"
