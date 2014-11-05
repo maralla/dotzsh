@@ -29,8 +29,6 @@ alias la='ls -lAh'
 alias lg="ls | grep"
 alias sl=ls # often screw this up
 
-alias afind='ack-grep -il'
-
 alias tmux="tmux -2"
 
 alias cj="cd ~/project"
