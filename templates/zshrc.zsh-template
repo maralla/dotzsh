@@ -60,8 +60,8 @@ plugins=(
     history
 )
 
-export VIRTUALENVWRAPPER_PYTHON=`which python`
-export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 
 source $ZSH/oh-my-zsh.sh
 
