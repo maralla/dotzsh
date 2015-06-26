@@ -36,6 +36,9 @@ for plugin ($plugins); do
   if [ -f $ZSH/plugins/$plugin.plugin.zsh ]; then
     source $ZSH/plugins/$plugin.plugin.zsh
   fi
+  if [ -f $ZSH/plugins/$plugin.zsh ]; then
+    source $ZSH/plugins/$plugin.zsh
+  fi
 done
 
 # Load the theme

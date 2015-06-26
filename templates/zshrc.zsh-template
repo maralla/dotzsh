@@ -58,6 +58,7 @@ plugins=(
     history
     brew
     z
+    zsh-syntax-highlighting
 )
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
