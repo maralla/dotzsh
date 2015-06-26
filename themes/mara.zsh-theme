@@ -1,6 +1,13 @@
 #!/usr/bin/env zsh
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
+hostname_suffix() {
+    if [ "$TMUX" != "" ]
+    then
+        echo '.tmux'
+    fi
+}
+
 setopt promptsubst
 
 autoload -U add-zsh-hook
@@ -13,10 +20,8 @@ FONT_COLOR=$FG[172]
 HOST_COLOR=$FG[108]
 USER_COLOR=$FG[109]
 DARK=$FG[242]
-#╰ᐳ
-#PROMPT='%{$FRAME_COLOR%}╭─[%{$DARK%}%n%{$reset_color%}%{$DARK%}@%{$DARK%}%M%{$reset_color%}%{$FRAME_COLOR%}]%{$FONT_COLOR%}-%{$FRAME_COLOR%}(%{$FONT_COLOR%}%~%{$reset_color%}%{$FRAME_COLOR%})$(git_prompt_info)
-#╰>%b % %{$reset_color%}'
-PROMPT='%{$FRAME_COLOR%}[%{$USER_COLOR%}%n%{$reset_color%}%{$DARK%}@%{$HOST_COLOR%}%M%{$reset_color%}%{$FRAME_COLOR%}]%{$FONT_COLOR%}-%{$FRAME_COLOR%}(%{$FONT_COLOR%}%~%{$reset_color%}%{$FRAME_COLOR%})$(git_prompt_info)
+
+PROMPT='%{$USER_COLOR%}%n%{$reset_color%}%{$DARK%}@%{$HOST_COLOR%}%m$(hostname_suffix)%{$reset_color%}%{$FONT_COLOR%}-%{$FRAME_COLOR%}(%{$FONT_COLOR%}%~%{$reset_color%}%{$FRAME_COLOR%})$(git_prompt_info)
 ➤ %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="-‹%{$reset_color%}%{$fg[white]%}%{$FG[244]%}"
