@@ -1,8 +1,14 @@
 # get the name of the branch we are on
 function git_prompt_info() {
   if [[ "$(git config --get oh-my-zsh.hide-status)" != "1" ]]; then
+    branches=$(command git branch 2> /dev/null) || return
+
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
+
+    if [ "$branches" != "" ]; then
+      ref=$(command echo $branches | grep '*' | sed 's/^\* //' | sed 's/(detached from \(.*\))/\1/' 2> /dev/null) || return
+    fi
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
