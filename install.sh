@@ -17,6 +17,7 @@ hash git > /dev/null && git clone https://github.com/maralla/dotzsh.git $ZSH || 
   echo "git not installed"
   exit
 }
+(cd $ZSH && git submodule update --init --recursive)
 
 echo "\033[0;34mLooking for an existing zsh config...\033[0m"
 if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
