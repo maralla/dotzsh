@@ -16,6 +16,14 @@ is_plugin() {
     || test -f $base_dir/plugins/_$name \
 }
 
+# Add all defined plugins to fpath. This must be done
+# before running compinit.
+for completion ($plugins); do
+  if [ -f $ZSH/completion/$completion/_$completion ]; then
+    fpath=($ZSH/completion/$completion $fpath)
+  fi
+done
+
 # Figure out the SHORT hostname
 if [ -n "$commands[scutil]" ]; then
   # OS X

@@ -1,6 +1,9 @@
-[submodule "lib/z"]
-	path = lib/z
+[submodule "library/z"]
+	path = library/z
 	url = https://github.com/rupa/z.git
-[submodule "lib/zsh-syntax-highlighting"]
-	path = lib/zsh-syntax-highlighting
+[submodule "library/zsh-syntax-highlighting"]
+	path = library/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "completion/rust"]
+	path = completion/rust
+	url = git@github.com:rust-lang/zsh-config.git

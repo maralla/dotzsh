@@ -1,1 +1,1 @@
-[[ -f $ZSH/lib/z/z.sh ]] && source $ZSH/lib/z/z.sh
+[[ -f $ZSH/library/z/z.sh ]] && source $ZSH/library/z/z.sh
