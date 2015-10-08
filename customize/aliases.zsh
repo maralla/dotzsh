@@ -35,3 +35,5 @@ alias cj="cd ~/project"
 alias cw="cd ~/workspace"
 
 alias pg="ps aux | grep"
+
+alias rvi="vim -u NONE"
