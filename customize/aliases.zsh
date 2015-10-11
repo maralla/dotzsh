@@ -37,3 +37,4 @@ alias cw="cd ~/workspace"
 alias pg="ps aux | grep"
 
 alias rvi="vim -u NONE"
+alias git="/usr/local/Cellar/git/2.6.1/bin/git"
